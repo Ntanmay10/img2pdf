@@ -24,8 +24,18 @@ def image_to_pdf(image_paths, pdf_path):
 
     for image_path in image_paths:
         pdf.add_page()  # Add a new page to the PDF
-        pdf.image(image_path, x=0, y=0, w=210, h=297)  # Insert image into PDF, size A4
-
+        
+        # Get image dimensions
+        pdf.image(image_path, x=0, y=0, w=260, h=297)  # Insert image into PDF, size A4
+        img_width = pdf.w
+        img_height = pdf.h
+        
+        # Calculate center coordinates
+        x_pos = (pdf.w - img_width) / 2
+        y_pos = (pdf.h - img_height) / 2
+        
+        pdf.image(image_path, x=x_pos, y=y_pos, w=img_width, h=img_height)  # Centered image
+        
     pdf.output(pdf_path)  # Output PDF to specified path
     print(f"PDF created successfully at {pdf_path}")
 
