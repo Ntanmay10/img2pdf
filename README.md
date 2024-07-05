@@ -49,3 +49,6 @@ Usage:
    > -Ensure all specified image paths are correct and accessible.
 
    > -The resulting PDF will be created at the specified path.
+
+7. Contact me:
+> - Email: findtanmay10@gmail.com 
