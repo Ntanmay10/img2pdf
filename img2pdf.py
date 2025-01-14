@@ -34,7 +34,7 @@ def main():
     """
     Main function to handle user input and program flow.
     """
-    clear_screen()  # Clear the terminal screen
+    clear_screen()
     
     print("********************************************")
     print("*                                          *")
