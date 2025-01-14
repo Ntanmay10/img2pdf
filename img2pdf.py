@@ -10,16 +10,7 @@ def clear_screen():
         os.system('clear')  # For Linux and macOS
 
 def image_to_pdf(image_paths, pdf_path):
-    """
-    Converts images to a PDF file.
-
-    Args:
-    - image_paths (list): List of paths to images.
-    - pdf_path (str): Path where the PDF will be saved.
-
-    Returns:
-    - None
-    """
+    
     pdf = FPDF(unit='pt')  # Create instance of FPDF class (unit in points)
 
     for image_path in image_paths:
@@ -84,4 +75,4 @@ def main():
         print("Invalid choice. Please run the program again and select a valid option.")
 
 if __name__ == '__main__':
-    main()  # Entry point of the script
+    main()
